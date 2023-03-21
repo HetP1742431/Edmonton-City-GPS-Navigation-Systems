@@ -1,0 +1,20 @@
+Name: Het Bharatkumar Patel
+SID: 1742431
+CCID: hetbhara
+AnonID: 1000348298
+CMPUT 275, Winter 2023
+
+Assignment #1 Part 1: Navigation System
+
+Included files: server.cpp, dijkstra.cpp, dijkstra.h, digraph.cpp, digraph.h, edmonton-roads-2.0.1.txt, digraph.h, Makefile, README
+
+Running instructions: First type make in soln directory (or create the executable file by compiling all required files) to create the executable file 'server'. Then type ./server < ../tests/test00-input.txt > mysol.txt. Here, mysol.txt will be created, and then to compare file mysol.txt to the output file, use diff mysol.txt ../tests/test00-output.txt. This way you can compare the original output file and expected original output file. 
+
+Makefile targets: 
+    - make server: compiles all the required files in one executable file 'server'.
+    - make server.o: creates an object file for server.cpp.
+    - make dijkstra.o: creates an object file for dijkstra.cpp and dijkstra.h.
+    - make digraph.o: creates an object file for digraph.cpp and digraph.h.
+    - make clean: Removes all object files and executables.
+
+Notes: Some parts of code for function void dijkstra(const WDigraph &graph, int startVertex, unordered_map<int, PIL> &searchTree) in file dijkstra.cpp is taken from the lecture 14 in-class discussion.
