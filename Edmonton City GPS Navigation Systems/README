@@ -1,0 +1,22 @@
+Name: Het Bharatkumar Patel
+SID: 1742431
+CCID: hetbhara
+AnonID: 1000348298
+CMPUT 275, Winter 2023
+
+Assignment #1 Part 2: Navigation System
+
+Included files: server.cpp, dijkstra.cpp, dijkstra.h, digraph.cpp, digraph.h, edmonton-roads-2.0.1.txt, wdigraph.h, client.py, Makefile (/soln/Makefile), Makefile (/soln/server/Makefile), README
+
+Running instructions: First type make in soln directory (or create the executable file by compiling all required files) to create the executable file 'server'. To test the full navigation system, you will need to open two terminals. This can be done by running gnome-terminal in the terminal of the VM image (in VirtualBox) or initiating two SSH connections from your host to the multipass instance using ssh -X. You can then run the client from one terminal and the server from the other terminal (after making the executable). Specifically, in the first terminal, run the following command from the soln directory to run the server program: ./server server Similarly, in the second terminal, run the following command from the soln directory to run the plotter: python3 client/client.py. This will open up the Map and then you can select any two points on the map to find the shortest path between those two points.
+
+Makefile (/soln/server) targets: 
+    - make server: compiles all the required files in one executable file 'server'.
+    - make server.o: creates an object file for server.cpp.
+    - make dijkstra.o: creates an object file for dijkstra.cpp and dijkstra.h.
+    - make digraph.o: creates an object file for digraph.cpp and digraph.h.
+    - make clean: Removes all object files and executables.
+
+Makefile (/soln) targets:
+    - make run: runs both server/server (executable made by compiling all required files located in soln/server) and client/client.py in two different terminals using gnome-terminal
+    - make clean: Removes all executable, objects, and named pipes.
